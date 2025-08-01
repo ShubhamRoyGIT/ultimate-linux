@@ -1,8 +1,8 @@
-**Linux Boot Process**
+# Linux Boot Process
 
 The Linux boot process is the sequence of steps your system goes through to load the operating system — from powering on to the login prompt or GUI.
 
-🧠 Overview: 6 Stages of the Linux Boot Process
+## 🧠 Overview: 6 Stages of the Linux Boot Process
 Step	Component	What It Does
 - 1️⃣	"BIOS / UEFI"	Initializes hardware and finds bootable media
 - 2️⃣	"Bootloader (GRUB)"	Loads kernel and initial RAM disk
@@ -11,10 +11,10 @@ Step	Component	What It Does
 - 5️⃣	"Init system (systemd, SysV)"	Starts system services (network, SSH, etc.)
 - 6️⃣	"Login prompt / GUI"	User logs in via terminal or desktop
 
-🔍 Step-by-Step Breakdown
+## 🔍 Step-by-Step Breakdown
 
 
-🏁 1. BIOS(Old System) / UEFI(Modern System) - (Program Stored in Seperate Chip on Motherboard)
+### 🏁 1. BIOS(Old System) / UEFI(Modern System) - (Program Stored in Seperate Chip on Motherboard)
 - Performs POST (Power-On Self Test) - check if all hardware components have power
 - Detects CPU, RAM, disks, keyboard, etc.
 - Starts scanning the bootable device listed in BIOS Settings device list
@@ -30,7 +30,7 @@ Step	Component	What It Does
 - Booatloader is loaded
 
 
-🚀 2. Bootloader (usually GRUB)
+### 🚀 2. Bootloader (usually GRUB)
 
 GRUB (GRand Unified Bootloader) is the most common
 
@@ -41,7 +41,7 @@ GRUB (GRand Unified Bootloader) is the most common
 /boot/grub/grub.cfg
 ```
 
-🧩 3. Linux Kernel
+### 🧩 3. Linux Kernel
 
 
 Uncompressed and initialized by GRUB
@@ -53,7 +53,7 @@ Uncompressed and initialized by GRUB
 At this point, you have a running kernel — but not yet a usable system.
 
 
-📦 4. initramfs (Initial RAM Filesystem)
+### 📦 4. initramfs (Initial RAM Filesystem)
 
 
 - A temporary root filesystem (in RAM)
@@ -123,7 +123,7 @@ Example: Loads RAID/LVM/crypto drivers if needed
 
 Then switches to the real root filesystem
 
-🔧 5. Init System (systemd, init, upstart)
+### 🔧 5. Init System (systemd, init, upstart)
 
 
 - Controls what services and daemons start
@@ -142,7 +142,7 @@ Custom services
 
 ```
 
-👤 6. Login (CLI or GUI)
+### 👤 6. Login (CLI or GUI)
 
 
 You’re presented with a:
@@ -150,9 +150,9 @@ You’re presented with a:
 - GUI login manager (gdm, lightdm) on desktop
 - System is now fully booted and operational
 
-  
 
-🧭 Visual Summary
+
+# 🧭 Visual Summary
 
 
 [ BIOS / UEFI ]
